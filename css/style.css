@@ -143,15 +143,14 @@ img {
 .here-section {
   background: #2e2f42;
   background-image: linear-gradient(
-      to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(/images/hero.img.jpg);
-  background-size: 100px, cover;
   max-width: 1440рх;
-  /* background-position: top right, center;
-  background-repeat: repeat-x, no-repeat; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 188px 0;
   flex-shrink: 0;
 }
@@ -192,6 +191,8 @@ img {
   align-items: center;
   border-radius: 4px;
   border: none;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .here-btn:hover,
 .here-btn:focus {
@@ -227,12 +228,15 @@ img {
   width: calc((100% - 72px) / 4);
 }
 .advantages-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 264px;
   height: 112px;
   flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid var(--LIGHT-SLATE, #8e8f99);
-  background: var(--CLOUD, #f4f4fd);
+  background-color: #f4f4fd;
   background-color: #8e8f99;
   margin-bottom: 8px;
 }
@@ -286,6 +290,8 @@ img {
 .team-item {
   background-color: #fff;
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .our-team-intro {
   flex-direction: column;
@@ -312,10 +318,17 @@ img {
   margin-bottom: 8px;
 }
 .team-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #4d5ae5;
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
+}
+.team-link:hover,
+.team-link:focus {
+  background-color: #404bbf;
 }
 .team-soc-conteiner {
   display: flex;
@@ -324,7 +337,16 @@ img {
   gap: 24px;
 }
 .team-icon {
-  margin: 12px;
+  fill: #f4f4fd;
+}
+.team-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.team-social-item {
+  width: 40px;
+  height: 40px;
 }
 
 /* our Portfolio */
@@ -377,7 +399,7 @@ img {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-.footer-page {
+.footer-page-container {
   display: flex;
   align-items: baseline;
 }
