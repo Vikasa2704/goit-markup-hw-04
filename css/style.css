@@ -125,6 +125,7 @@ img {
   height: 4px;
   border-radius: 2px;
   background: var(--OCEAN, #404bbf);
+  transform: translate(0, 24px);
 }
 
 /* contacts */
